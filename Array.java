@@ -1,48 +1,55 @@
-public class Array
-{
+public class Array {
 
-	// Array should be of format
-	// 1 2 3
-	// 4 5 6
-	// 7 8 9
-	public int[][] getRowMajorSquare(int x)
-	{
-//	
-	}
+    public int[][] getRowMajorSquare(int x) {
+        int[][] result = new int[x][x];
+        int num = 1;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+                result[i][j] = num++;
+            }
+        }
+        return result;
+    }
 
-	// Array should be of format
-	// 1 4 7
-	// 2 5 8
-	// 3 6 9
-	public int[][] getColumnMajorSquare(int x)
-	{
-//		
-	}
+    public int[][] getColumnMajorSquare(int x) {
+        int[][] result = new int[x][x];
+        int num = 1;
+        for (int j = 0; j < x; j++) {
+            for (int i = 0; i < x; i++) {
+                result[i][j] = num++;
+            }
+        }
+        return result;
+    }
 
-	// Array should be of format
-	// 1 2 3 4
-	// 5 6 7 8
-	// 9 10 11 12
-	public int[][] getRowMajorRectangle(int row, int column)
-	{
-		
-	}
+    public int[][] getRowMajorRectangle(int row, int column) {
+        int[][] result = new int[row][column];
+        int num = 1;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                result[i][j] = num++;
+            }
+        }
+        return result;
+    }
 
-	// Array should be of format
-	// 1 4 7 10
-	// 2 5 8 11
-	// 3 6 9 12
-	public int[][] getColumnMajorRectangle(int column, int row)
-	{
-	
-	}
+    public int[][] getColumnMajorRectangle(int column, int row) {
+        int[][] result = new int[row][column];
+        int num = 1;
+        for (int j = 0; j < column; j++) {
+            for (int i = 0; i < row; i++) {
+                result[i][j] = num++;
+            }
+        }
+        return result;
+    }
 
-	// Please note that each digit occupies two spaces and there is a space between
-	// them.
-	// You are not required to deal with three digit numbers.
-	public void printDouble(int[][] a)
-    {
-	
-
-	}
+    public void printDouble(int[][] a) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(String.format("%2d ", a[i][j]));
+            }
+            System.out.println();
+        }
+    }
 }
